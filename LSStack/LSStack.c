@@ -19,6 +19,16 @@ Node * node_init(int element)
     return result;
 }
 
+void node_delete(Node *node)
+{
+    if (node == NULL) {
+        return;
+    }
+    node->data = 0;
+    node->next = NULL;
+    free(node);
+}
+
 Stack * stack_init(int capacity, Node *first)
 {
     Stack *result = (Stack *)malloc(sizeof(Stack));
@@ -52,18 +62,23 @@ void stack_pop(Stack *stack)
     }
 
     if (stack->count == 1) {
+        node_delete(stack->first);
         stack->first = NULL;
         stack->count = 0;
         return;
     }
 
+    Node *last = NULL;
     Node *current = stack->first;
     Node *next = current->next;
 
-    while (next != NULL) {
+    while (next->next != NULL) {
+        last = current;
         current = next;
         next = current->next;
     }
+
+    node_delete(next);
 
     current->next = NULL;
     stack->count--;
