@@ -27,7 +27,7 @@ typedef struct Stack
 Node * node_init(int element);
 void node_delete(Node *node);
 /* Stack functions */
-Stack * stack_init(int capacity, Node *first);
+Stack * stack_init(Node *first);
 bool stack_is_empty(Stack *stack);
 void stack_push(Stack *, int entry);
 void stack_pop(Stack *);

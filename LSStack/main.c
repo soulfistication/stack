@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
 
     Node *first = node_init(5);
-    Stack *myStack = stack_init(5, first);
+    Stack *myStack = stack_init(first);
 
     int data = myStack->first->data;
     printf("the data in the first element of the stack is: %d\n", data);

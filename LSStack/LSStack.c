@@ -29,7 +29,7 @@ void node_delete(Node *node)
     free(node);
 }
 
-Stack * stack_init(int capacity, Node *first)
+Stack * stack_init(Node *first)
 {
     Stack *result = (Stack *)malloc(sizeof(Stack));
     result->first = first;
