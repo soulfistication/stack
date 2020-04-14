@@ -68,12 +68,10 @@ void stack_pop(Stack *stack)
         return;
     }
 
-    Node *last = NULL;
     Node *current = stack->first;
     Node *next = current->next;
 
     while (next->next != NULL) {
-        last = current;
         current = next;
         next = current->next;
     }
