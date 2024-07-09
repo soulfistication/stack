@@ -15,4 +15,8 @@ typedef struct Node
     struct Node *next;
 } Node;
 
+/* Node functions */
+Node * node_init(int element);
+void node_delete(Node *node);
+
 #endif /* Node_h */

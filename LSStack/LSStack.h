@@ -18,9 +18,6 @@ typedef struct Stack
     int count;
 } Stack;
 
-/* Node functions */
-Node * node_init(int element);
-void node_delete(Node *node);
 /* Stack functions */
 Stack * stack_init(Node *first);
 bool stack_is_empty(Stack *stack);

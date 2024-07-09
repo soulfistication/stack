@@ -11,24 +11,6 @@
 #include <stdbool.h>
 #include "LSStack.h"
 
-Node * node_init(int element)
-{
-    Node *result = (Node *)malloc(sizeof(Node));
-    result->data = element;
-    result->next = NULL;
-    return result;
-}
-
-void node_delete(Node *node)
-{
-    if (node == NULL) {
-        return;
-    }
-    node->data = 0;
-    node->next = NULL;
-    free(node);
-}
-
 Stack * stack_init(Node *first)
 {
     Stack *result = (Stack *)malloc(sizeof(Stack));
