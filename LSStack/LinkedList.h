@@ -11,5 +11,15 @@
 
 #include "Node.h"
 
+typedef struct LinkedList {
+    struct Node *element;
+    int count;
+} LinkedList;
+
+LinkedList *list_init(Node *first);
+void list_add(LinkedList *, int entry);
+
+void printElement(Node *element);
+void printList(LinkedList *list);
 
 #endif /* LinkedList_h */

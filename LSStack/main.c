@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "LSStack.h"
+#include "LinkedList.h"
 
 int main(int argc, const char * argv[]) {
 
@@ -41,6 +42,16 @@ int main(int argc, const char * argv[]) {
         stack_pop(myStack);
         printf("popped one element\n");
     }
+
+    /*  Test the Linked List */
+    Node *firstElement = node_init(5);
+    LinkedList *list = list_init(firstElement);
+    list_add(list, 6);
+    list_add(list, 7);
+    list_add(list, 8);
+    list_add(list, 9);
+
+    printList(list);
 
     return 0;
 }
