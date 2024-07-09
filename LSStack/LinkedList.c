@@ -51,3 +51,17 @@ void printList(LinkedList *list) {
 void printElement(Node *element) {
     printf("%d\n", element->data);
 }
+
+void deleteList(LinkedList *list) {
+    Node *next = list->element->next;
+
+    node_delete(list->element);
+
+    while (next != NULL) {
+        Node *temp = next;
+        next = next->next;
+        node_delete(temp);
+    }
+
+    free(list);
+}

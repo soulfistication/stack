@@ -21,5 +21,6 @@ void list_add(LinkedList *, int entry);
 
 void printElement(Node *element);
 void printList(LinkedList *list);
+void deleteList(LinkedList *list);
 
 #endif /* LinkedList_h */
