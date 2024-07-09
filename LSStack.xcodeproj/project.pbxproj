@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		247836A62C3CE9F2000E2422 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		5229284F2446316400639CB3 /* LSStack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LSStack; sourceTree = BUILT_PRODUCTS_DIR; };
 		522928522446316400639CB3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		52292859244631BD00639CB3 /* LSStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSStack.h; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				522928522446316400639CB3 /* main.c */,
 				52292859244631BD00639CB3 /* LSStack.h */,
 				5229285A244631BD00639CB3 /* LSStack.c */,
+				247836A62C3CE9F2000E2422 /* Node.h */,
 			);
 			path = LSStack;
 			sourceTree = "<group>";

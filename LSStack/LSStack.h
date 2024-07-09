@@ -10,12 +10,7 @@
 #define LSStack_h
 
 #include <stdio.h>
-
-typedef struct Node
-{
-    int data;
-    struct Node *next;
-} Node;
+#include "Node.h"
 
 typedef struct Stack
 {
