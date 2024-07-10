@@ -46,22 +46,22 @@ bool list_is_empty(LinkedList *list) {
     return list->count == 0;
 }
 
-void printList(LinkedList *list) {
-    printElement(list->element);
+void print_list(LinkedList *list) {
+    print_element(list->element);
 
     Node *next = list->element->next;
 
     while (next != NULL) {
-        printElement(next);
+        print_element(next);
         next = next->next;
     }
 }
 
-void printElement(Node *element) {
+void print_element(Node *element) {
     printf("%d\n", element->data);
 }
 
-void deleteList(LinkedList *list) {
+void delete_list(LinkedList *list) {
     Node *next = list->element->next;
 
     node_delete(list->element);

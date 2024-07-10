@@ -54,12 +54,12 @@ int main(int argc, const char * argv[]) {
     list_add(list, 8);
     list_add(list, 9);
 
-    printList(list);
+    print_list(list);
     printf("Reversed:\n");
 
     list_reverse(list);
-    printList(list);
+    print_list(list);
 
-    deleteList(list);
+    delete_list(list);
     return 0;
 }

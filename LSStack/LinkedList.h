@@ -20,9 +20,9 @@ LinkedList *list_init(Node *first);
 void list_add(LinkedList *list, int entry);
 bool list_is_empty(LinkedList *list);
 
-void printElement(Node *element);
-void printList(LinkedList *list);
-void deleteList(LinkedList *list);
+void print_element(Node *element);
+void print_list(LinkedList *list);
+void delete_list(LinkedList *list);
 
 void list_reverse(LinkedList *list);
 
