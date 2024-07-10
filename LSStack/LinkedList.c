@@ -8,6 +8,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
 #include "LinkedList.h"
 
 LinkedList *list_init(Node *first) {
@@ -25,6 +27,7 @@ void list_add(LinkedList *list, int entry) {
     if (list->count == 1) {
         list->element->next = next;
         list->count = 2;
+        printf("List count = %d\n", list->count);
         return;
     }
 
@@ -35,6 +38,12 @@ void list_add(LinkedList *list, int entry) {
     }
 
     last->next = next;
+    list->count++;
+    printf("List count = %d\n", list->count);
+}
+
+bool isEmpty(LinkedList *list) {
+    return list->count == 0;
 }
 
 void printList(LinkedList *list) {
@@ -61,6 +70,7 @@ void deleteList(LinkedList *list) {
         Node *temp = next;
         next = next->next;
         node_delete(temp);
+        list->count--;
     }
 
     free(list);

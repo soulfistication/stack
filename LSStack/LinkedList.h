@@ -18,6 +18,7 @@ typedef struct LinkedList {
 
 LinkedList *list_init(Node *first);
 void list_add(LinkedList *, int entry);
+bool isEmpty(LinkedList *list);
 
 void printElement(Node *element);
 void printList(LinkedList *list);
