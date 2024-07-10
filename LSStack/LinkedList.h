@@ -17,11 +17,13 @@ typedef struct LinkedList {
 } LinkedList;
 
 LinkedList *list_init(Node *first);
-void list_add(LinkedList *, int entry);
-bool isEmpty(LinkedList *list);
+void list_add(LinkedList *list, int entry);
+bool list_is_empty(LinkedList *list);
 
 void printElement(Node *element);
 void printList(LinkedList *list);
 void deleteList(LinkedList *list);
+
+void list_reverse(LinkedList *list);
 
 #endif /* LinkedList_h */

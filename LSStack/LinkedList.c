@@ -42,7 +42,7 @@ void list_add(LinkedList *list, int entry) {
     printf("List count = %d\n", list->count);
 }
 
-bool isEmpty(LinkedList *list) {
+bool list_is_empty(LinkedList *list) {
     return list->count == 0;
 }
 
@@ -74,4 +74,19 @@ void deleteList(LinkedList *list) {
     }
 
     free(list);
+}
+
+void list_reverse(LinkedList *list) {
+    Node *previous = NULL;
+    Node *current = list->element;
+    Node *next;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = previous;
+        previous = current;
+        current = next;
+    }
+
+    list->element = previous;
 }
